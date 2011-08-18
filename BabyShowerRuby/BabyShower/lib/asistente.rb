@@ -1,20 +1,22 @@
+require "Date.rb"
 class Asistente
   
   
-  def initialize (nombre, fechaNacimiento)
-    @nombre, @fechaNacimiento = nombre, fechaNacimiento;
+  def initialize (nombre, fecha_nacimiento)
+    @nombre, @fecha_nacimiento = nombre, fecha_nacimiento;
   end
  
   def age
-  ((Time.now - fechaNacimiento))
+   ((Date.today - @fecha_nacimiento).to_i/365.25).to_i
+   
   end
   
-  def decirEdad()
-    return age
+  def decir_edad()
+    age
   end
   
-  def preguntarEdad(asistente)
-    return asistente.decirEdad
+  def preguntar_edad(asistente)
+    asistente.decir_edad
   end
   
 end
