@@ -6,7 +6,7 @@ class Asistente
   end
  
   def age
-  ((Time.now - @{fechaNacimiento}))
+  ((Time.now - fechaNacimiento))
   end
   
   def decirEdad()
